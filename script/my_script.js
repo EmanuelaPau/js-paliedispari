@@ -64,6 +64,11 @@ console.log(randomNumber(1, 5))
  * @param theNumberGiven the number that tells if odd or even win 
  */
 
-function isNumberEven(myBet, theNumberGiven) {
+function isOddEvenBetWon(myBet, theNumberGiven) {
+    if (myBet === 'pari' & (theNumberGiven % 2 == 0)) {
+        return true;
+    } else if (myBet === 'dispari' & (theNumberGiven % 2 == 1)) {
+        return true;
+    } return false;
 
 }
