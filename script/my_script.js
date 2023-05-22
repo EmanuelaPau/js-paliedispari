@@ -36,7 +36,8 @@
 //     console.log(`${userWord} non è palindroma`);
 // }
 
-// Pari e Dispari
+// PARI E DISPARI
+
 // Faccio un prompt dove chiedo un numero pari o dispari 
 // genero un numero random pari o dispari (con una funzione) 
 // faccio una funzione isNumberEven?
@@ -44,7 +45,9 @@
 
 const userBet = prompt('Pari o Dispari?');
 console.log(userBet);
-let userBetMin = userBet.toLowerCase();
+
+const userNumber = prompt('Tell me a number from 1 to 5');
+console.log(userNumber);
 // console.log(userBetMin);
 
 /**
@@ -61,18 +64,21 @@ function randomNumber(minNumber, maxNumber) {
 /**
  * A function that tells if even or odd wins
  * @param myBet what the player betted (odd or even) (string)
- * @param theNumberGiven the number that tells if odd or even win (number)
+* @param theNumberPlayed the number that the user has playes
+ * @param theNumberGiven the number that the computer has played
  */
 
-function isOddEvenBetWon(myBet, theNumberGiven) {
-    if (myBet === 'pari' & (theNumberGiven % 2 === 0)) {
+
+
+function isOddEvenBetWon(myBet, theNumberPlayed, theNumberGiven) {
+    if (myBet === 'pari' & ((theNumberGiven + theNumberPlayed) % 2 === 0)) {
         return true;
     } else if (myBet === 'dispari' & (theNumberGiven % 2 === 1)) {
         return true;
     } return false;
 }
 
-if (isOddEvenBetWon(userBetMin, randomNumber(1, 5)) === true) {
+if (isOddEvenBetWon(userBet, userNumber, randomNumber(1, 5)) === true) {
     console.log('hai vinto!');
 } else {
     console.log('hai perso!')
