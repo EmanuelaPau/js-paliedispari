@@ -15,4 +15,14 @@
 // creo una nuova stringa con usando il contatore al contrario?? forse posso fare un array?
 // verifico se la prima stringa e' uguale alla seconda
 
-let userWord = prompt("tell me a word!")
+let userWord = prompt("tell me a word!");
+
+/**
+ * Function that tells you if the string is palindrome 
+ * @param yourString The user word
+ */
+
+function isStringPalindrome(yourString) {
+
+}
+
