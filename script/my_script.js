@@ -16,6 +16,7 @@
 // verifico se la prima stringa e' uguale alla seconda
 
 let userWord = prompt("tell me a word!");
+console.log(userWord)
 
 /**
  * Function that tells you if the string is palindrome
@@ -25,14 +26,21 @@ let userWord = prompt("tell me a word!");
 function isStringPalindrome(yourString) {
     let reverseString = "";
 
-    yourString = "ciccio"
+    // yourString = "ciccio"
     for (let i = yourString.length - 1; i >= 0; i--) {
-        console.log(i);
         reverseString = reverseString + yourString[i];
     }
+
+    console.log(reverseString);
 
     if (yourString === reverseString) {
         return true;
     } return false;
 }
 
+
+if (isStringPalindrome(userWord)) {
+    console.log(`${userWord} è palindroma`);
+} else {
+    console.log(`${userWord} non è palindroma`);
+}
