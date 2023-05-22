@@ -22,15 +22,17 @@ let userWord = prompt("tell me a word!");
  * @param yourString The user word
  */
 
-// function isStringPalindrome(yourString) {
-let reverseString = "";
+function isStringPalindrome(yourString) {
+    let reverseString = "";
 
-yourString = "ciccio"
-for (let i = yourString.length - 1; i >= 0; i--) {
-    console.log(i);
-    reverseString = reverseString + yourString[i];
+    yourString = "ciccio"
+    for (let i = yourString.length - 1; i >= 0; i--) {
+        console.log(i);
+        reverseString = reverseString + yourString[i];
+    }
+
+    if (yourString === reverseString) {
+        return true;
+    } return false;
 }
-
-console.log(reverseString);
-// }
 
