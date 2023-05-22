@@ -42,10 +42,28 @@
 // faccio una funzione isNumberEven?
 // creo soluzione con console log e if else
 
-const userNumber = parseInt(prompt('tell me a number from 1 to 5'));
+const userNumber = prompt('Pari o Dispari?');
 console.log(userNumber);
+let userNumberMin = userNumber.toLowerCase()
+
+/**
+ * A function that return a random number from a minimum number to a maximum number
+ * @param minNumber the minimum number i want to get
+ * @param maxNumber the maximum number i want to get
+ * @returns 
+ */
 
 function randomNumber(minNumber, maxNumber) {
     return Math.floor(Math.random() * maxNumber + minNumber)
 }
 console.log(randomNumber(1, 5))
+
+/**
+ * A function that tells if even or odd wins
+ * @param myBet what the player betted (odd or even) 
+ * @param theNumberGiven the number that tells if odd or even win 
+ */
+
+function isNumberEven(myBet, theNumberGiven) {
+
+}
