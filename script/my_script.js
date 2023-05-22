@@ -18,11 +18,15 @@
 let userWord = prompt("tell me a word!");
 
 /**
- * Function that tells you if the string is palindrome 
+ * Function that tells you if the string is palindrome
  * @param yourString The user word
  */
 
-function isStringPalindrome(yourString) {
+// function isStringPalindrome(yourString) {
 
+yourString = "ciccio"
+for (let i = yourString.length; i >= 0; i--) {
+    console.log(i);
 }
+// }
 
