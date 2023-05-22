@@ -44,7 +44,8 @@
 
 const userBet = prompt('Pari o Dispari?');
 console.log(userBet);
-let userBetMin = userBet.toLowerCase()
+let userBetMin = userBet.toLowerCase();
+// console.log(userBetMin);
 
 /**
  * A function that return a random number from a minimum number to a maximum number
@@ -56,7 +57,6 @@ let userBetMin = userBet.toLowerCase()
 function randomNumber(minNumber, maxNumber) {
     return Math.floor(Math.random() * maxNumber + minNumber)
 }
-console.log(randomNumber(1, 5))
 
 /**
  * A function that tells if even or odd wins
@@ -72,7 +72,7 @@ function isOddEvenBetWon(myBet, theNumberGiven) {
     } return false;
 }
 
-if (isOddEvenBetWon('pari', 3) === true) {
+if (isOddEvenBetWon(userBetMin, randomNumber(1, 5)) === true) {
     console.log('hai vinto!');
 } else {
     console.log('hai perso!')
