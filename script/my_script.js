@@ -42,5 +42,10 @@
 // faccio una funzione isNumberEven?
 // creo soluzione con console log e if else
 
-let userNumber = parseInt(prompt('tell me a number from 1 to 5'));
+const userNumber = parseInt(prompt('tell me a number from 1 to 5'));
 console.log(userNumber);
+
+function randomNumber(minNumber, maxNumber) {
+    return Math.floor(Math.random() * maxNumber + minNumber)
+}
+console.log(randomNumber(1, 5))
