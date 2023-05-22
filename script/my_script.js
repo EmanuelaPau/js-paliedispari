@@ -42,9 +42,9 @@
 // faccio una funzione isNumberEven?
 // creo soluzione con console log e if else
 
-const userNumber = prompt('Pari o Dispari?');
-console.log(userNumber);
-let userNumberMin = userNumber.toLowerCase()
+const userBet = prompt('Pari o Dispari?');
+console.log(userBet);
+let userBetMin = userBet.toLowerCase()
 
 /**
  * A function that return a random number from a minimum number to a maximum number
@@ -60,15 +60,20 @@ console.log(randomNumber(1, 5))
 
 /**
  * A function that tells if even or odd wins
- * @param myBet what the player betted (odd or even) 
- * @param theNumberGiven the number that tells if odd or even win 
+ * @param myBet what the player betted (odd or even) (string)
+ * @param theNumberGiven the number that tells if odd or even win (number)
  */
 
 function isOddEvenBetWon(myBet, theNumberGiven) {
-    if (myBet === 'pari' & (theNumberGiven % 2 == 0)) {
+    if (myBet === 'pari' & (theNumberGiven % 2 === 0)) {
         return true;
-    } else if (myBet === 'dispari' & (theNumberGiven % 2 == 1)) {
+    } else if (myBet === 'dispari' & (theNumberGiven % 2 === 1)) {
         return true;
     } return false;
+}
 
+if (isOddEvenBetWon('pari', 3) === true) {
+    console.log('hai vinto!');
+} else {
+    console.log('hai perso!')
 }
