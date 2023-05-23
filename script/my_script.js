@@ -24,11 +24,10 @@ function isStringPalindrome(yourString) {
 
     console.log(reverseString);
 
-    if (yourString === reverseString) {
+    if (yourString.toLowerCase() === reverseString.toLowerCase()) {
         return true;
     } return false;
 }
-
 
 if (isStringPalindrome(userWord)) {
     console.log(`${userWord} è palindroma`);
@@ -70,7 +69,7 @@ function randomNumber(minNumber, maxNumber) {
 
 function isOddEvenBetWon(myBet, theNumberPlayed, theNumberGiven) {
     // myBet = toLowerCase(myBet);
-    if (myBet === 'pari' & ((theNumberGiven + theNumberPlayed) % 2 === 0)) {
+    if (myBet.toLowerCase() === 'pari' & ((theNumberGiven + theNumberPlayed) % 2 === 0)) {
         return true;
     } else if (myBet === 'dispari' & (theNumberGiven % 2 === 1)) {
         return true;
